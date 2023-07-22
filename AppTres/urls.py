@@ -1,12 +1,13 @@
 from django.urls import path
-from AppTres import views
+from . import views
 
 
 urlpatterns = [
-    path('',views.inicio),
-    path('area',views.area, name='Area'),
-    path('empleado',views.empleado, name='Empleado'),
-    path('cliente',views.cliente, name='Cliente'),
-    path('proovedor',views.proovedor, name='Proovedor'),
-    
+    path('', views.inicio, name='inicio'),
+    path('area', views.area, name='area'),
+    path('empleado', views.empleado, name='empleado'),
+    path('cliente', views.cliente, name='cliente'),
+    path('proovedor', views.proovedor, name='proovedor'),
+    path('AreaFormulario/', views.areaFormulario, name= 'AreaFormulario'),
+    path('EmpleadoFormulario', views.empleadoForm, name= 'EmpleadoFormulario'),
 ]
