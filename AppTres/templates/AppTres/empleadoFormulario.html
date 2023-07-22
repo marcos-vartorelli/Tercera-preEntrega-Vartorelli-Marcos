@@ -6,7 +6,7 @@
     <title>Formulario - Agregar empleado</title>
 </head>
 <body>
-    {% if Formulario.errors %}
+    {% if formulario.errors %}
          <p style="color: red;"> Estan mal los datos</p>
          {% endif %}
          
@@ -15,7 +15,7 @@
         <!-- esto es django-->
         
         <table>
-        {{ Formulario.as_table }}
+        {{ formulario.as_table }}
         </table>
         
         <input type="submit" value="Enviar">

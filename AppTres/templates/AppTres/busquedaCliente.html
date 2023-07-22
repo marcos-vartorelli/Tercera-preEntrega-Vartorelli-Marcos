@@ -1,0 +1,18 @@
+{% extends 'AppTres/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+   {% if formulario.errors %}
+      <p style="color: red;">Estan mal los datos</p>
+   {% endif %}
+
+     <form action="/AppTress/buscar" method="GET">
+        <input type="text" name="nombre_cliente" >
+        <input type="submit" value="buscar">
+
+
+     </form>
+{% endblock %}

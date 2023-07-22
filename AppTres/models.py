@@ -12,7 +12,7 @@ class Empleado(models.Model):
     email = models.EmailField()
     
 class Cliente(models.Model):
-    nombre = models.CharField(max_length=30)
+    nombre_cliente = models.CharField(max_length=30)
     apellido = models.CharField(max_length=30)
     email = models.EmailField()
     tipo_auto= models.CharField(max_length=40)
@@ -21,6 +21,6 @@ class Proovedor(models.Model):
     marca = models.CharField(max_length=30)
     producto = models.CharField(max_length=50)
     fechaDeEntrega = models.DateField()
-    entrgado = models.BooleanField()
+    
     
     

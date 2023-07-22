@@ -1,0 +1,25 @@
+{% extends 'AppTres/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+   {% if formulario.errors %}
+      <p style="color: red;">Estan mal los datos</p>
+   {% endif %}
+
+    <p>Estamos buscando el : {{nombre_cliente}}</p>
+
+    {% if cliente %}
+        <ul>
+            {% for clientes in cliente %}
+
+                <li>{{cliente.nombre_cliente}}</li>
+                
+            {% endfor %}
+
+        </ul>
+
+    {% endif %}
+{% endblock %}
